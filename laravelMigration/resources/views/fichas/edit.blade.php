@@ -10,7 +10,8 @@
 <body class="container row">
     <div class=" center card col s8 push-s2">
         <div class=" card-content">
-            <form action="{{ route('fichas.update'),$row->id }}" method="post" id="data">
+            <form action="" method="post" id="data" >
+                @method('PUT')
                 @csrf
                 <div class="row">
                     <div class="col s12">

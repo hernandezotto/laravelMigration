@@ -40,7 +40,7 @@ class Formation_programsController extends Controller
     }
     public function delete($id)
     {
-        $rows = formation_program::find($id)->delete();
+        $rows=formation_program::find($id)->delete();
         return redirect()->route('cursos.index');
     }
 

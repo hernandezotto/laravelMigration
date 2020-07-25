@@ -15,8 +15,8 @@ class CreateFormationProgramsTable extends Migration
     {
         Schema::create('formation_programs', function (Blueprint $table) {
             $table->id();
-            $table->string('name',45);
-            $table->string('abbrevation',45);
+            $table->string('name',100);
+            $table->string('abbrevation',50);
             $table->timestamps();
         });
     }

@@ -30,7 +30,7 @@
                         <tr>
                             <td>{{$fichas->id}}</td>
                             <td>{{$fichas->name}}</td>
-                            <td>{{$fichas->create_at}}</td>
+                            <td>{{$fichas->created_at}}</td>
                             <td>{{$fichas->updated_at}}</td>
                             <td>
                                 <form action="" method="post">

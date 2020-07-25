@@ -28,6 +28,6 @@ Route::delete('cursos/{id}','Formation_programsController@delete' )->name('curso
 Route::get('fichas','GroupsController@index')->name('fichas.index');
 Route::get('fichas/create','GroupsController@create')->name('fichas.create');
 Route::post('fichas/data','GroupsController@data')->name('fichas.data');
-Route::get('fichas/edit/{id}','');
-Route::put();
+Route::get('fichas/edit/{id}','GroupsController@edit')->name('fichas.edit');
+Route::put('fichas/update/{id}','GroupsController@update')->name('fichas.update');
 // Route::delete();
