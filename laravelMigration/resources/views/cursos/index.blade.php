@@ -22,7 +22,7 @@
                                 <th>ABREVIACION</th>
                                 <th>FECHA DE CREACION</th>
                                 <th>FECHA DE ACTUALIZACION</th>
-                                <th>OCCIONES</th>
+                                <th>ACCIONES</th>
                             </tr>
                         </thead>
                         <tbody class="black-text">
