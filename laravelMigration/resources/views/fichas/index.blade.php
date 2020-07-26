@@ -33,7 +33,7 @@
                             <td>{{$fichas->created_at}}</td>
                             <td>{{$fichas->updated_at}}</td>
                             <td>
-                                <form action="" method="post">
+                                <form action="{{ route('fichas.delete',$fichas->id) }}" method="post">
                                     @method('DELETE')
                                     @csrf
                                     <a href="{{ route('fichas.edit',$fichas->id) }}" class="btn btn-flating btn-small green darken-2">

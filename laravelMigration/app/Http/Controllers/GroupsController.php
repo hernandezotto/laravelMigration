@@ -38,4 +38,9 @@ class GroupsController extends Controller
             ]);
             return redirect()->route('fichas.index');
     }
+    public function delete($id)
+    {
+        $rows=Groups::find($id)->delete();
+        return redirect()->route('fichas.index');
+    }
 }

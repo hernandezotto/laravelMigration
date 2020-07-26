@@ -20,14 +20,14 @@
                                 <label>Nombre del ficha</label>
                             </div>
                             <div class="row">
-                                <input-field class="col s12">
+                                <div class="input-field col s12">
                                     <select name="formation_programs_id" id="formation_programs_id">
                                         <option>SELECCIONAR...</option>
                                         @foreach ($formation as $fpID)
                                          <option value="{{$fpID->id}}">{{$fpID->name}}</option>
                                         @endforeach
                                     </select>
-                                </input-field>
+                                </div>
                             </div>
                         </div>
                     </div>

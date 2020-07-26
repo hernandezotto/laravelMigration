@@ -482,9 +482,14 @@ class ComposerStaticInita99720644cbebe7463648eedaa48687c
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Document_types' => __DIR__ . '/../..' . '/app/Document_types.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Genders' => __DIR__ . '/../..' . '/app/Genders.php',
+        'App\\Groups' => __DIR__ . '/../..' . '/app/Groups.php',
+        'App\\Http\\Controllers\\ApprenticesController' => __DIR__ . '/../..' . '/app/Http/Controllers/ApprenticesController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\Formation_programsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Formation_programsController.php',
+        'App\\Http\\Controllers\\GroupsController' => __DIR__ . '/../..' . '/app/Http/Controllers/GroupsController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -499,6 +504,7 @@ class ComposerStaticInita99720644cbebe7463648eedaa48687c
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\apprentices' => __DIR__ . '/../..' . '/app/apprentices.php',
         'App\\formation_program' => __DIR__ . '/../..' . '/app/formation_program.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',

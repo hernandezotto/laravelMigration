@@ -1,6 +1,7 @@
 <?php
 
 use App\formation_program;
+use App\Http\Controllers\Formation_programsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,4 +31,12 @@ Route::get('fichas/create','GroupsController@create')->name('fichas.create');
 Route::post('fichas/data','GroupsController@data')->name('fichas.data');
 Route::get('fichas/edit/{id}','GroupsController@edit')->name('fichas.edit');
 Route::put('fichas/update/{id}','GroupsController@update')->name('fichas.update');
-// Route::delete();
+Route::delete('fichas/{id}','GroupsController@delete')->name('fichas.delete');
+// rutas de la tabla aprendices
+Route::get('aprendices','ApprenticesController@index')->name('aprendices.index');
+Route::get('aprendices/create','ApprenticesController@create')->name('aprendices.create');
+Route::post('aprendices/data','GroupsController@data')->name('aprendices.data');
+Route::get('apremdices/edit/{id}','GroupsController@edit')->name('aprendices.edit');
+Route::put('apremdices/update/{id}','GroupsController@update')->name('aprendices.update');
+Route::delete('apremdices/{id}','GroupsController@delete')->name('aprendices.delete');
+
