@@ -10,7 +10,8 @@
 <body class="container row">
     <div class=" center card col s8 push-s2">
         <div class=" card-content">
-            <form action="{{ route('aprendices.update') }}" method="post" id="data">
+            <form action="{{ route('aprendices.update',$rows->id) }}" method="post" id="data">
+               @method('PUT')
                 @csrf
                 <div class="row">
                     <div class="col s12">
@@ -22,15 +23,14 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input type="text" name="lastnames" value="{{$rows->lastname}}">
+                                <input type="text" name="lastnames" value="{{$rows->lastnames}}">
                                 <label>Apellidos del aprendiz</label>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
                                     <select name="formation_programs_id" id="formation_programs_id">
-                                        <option>SELECCIONAR PROGRAMA DE FORMACION...</option>
                                         @foreach ($formation as $fpID)
-                                         <option value="{{$fpID->id}}">{{$fpID->name}}</option>
+                                        <option value="{{$fpID->id}}">{{$fpID->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -38,9 +38,8 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <select name="groups_id" id="groups_id">
-                                        <option>SELECCIONAR FICHA...</option>
                                         @foreach ($group as $gID)
-                                         <option value="{{$gID->id}}">{{$gID->name}}</option>
+                                        <option value="{{$gID->id}}">{{$gID->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -60,10 +59,9 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <select name="document_type_id" id="document_type_id">
-                                    <option>SELECCIONAR TIPO DE DOCUMENTO...</option>
+                                <select name="document_types_id" id="document_types_id">
                                     @foreach ($document as $dtID)
-                                     <option value="{{$dtID->id}}">{{$dtID->name}}</option>
+                                    <option value="{{$dtID->id}}">{{$dtID->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -77,9 +75,8 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <select name="genders_id" id="genders_id">
-                                    <option>SELECCIONAR TIPO DE GENERO...</option>
                                     @foreach ($genders as $genID)
-                                     <option value="{{$genID->id}}">{{$genID->name}}</option>
+                                    <option value="{{$genID->id}}">{{$genID->name}}</option>
                                     @endforeach
                                 </select>
                             </div>

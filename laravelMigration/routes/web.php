@@ -35,8 +35,8 @@ Route::delete('fichas/{id}','GroupsController@delete')->name('fichas.delete');
 // rutas de la tabla aprendices
 Route::get('aprendices','ApprenticesController@index')->name('aprendices.index');
 Route::get('aprendices/create','ApprenticesController@create')->name('aprendices.create');
-Route::post('aprendices/data','GroupsController@data')->name('aprendices.data');
-Route::get('apremdices/edit/{id}','GroupsController@edit')->name('aprendices.edit');
-Route::put('apremdices/update/{id}','GroupsController@update')->name('aprendices.update');
-Route::delete('apremdices/{id}','GroupsController@delete')->name('aprendices.delete');
+Route::post('aprendices/data','ApprenticesController@data')->name('aprendices.data');
+Route::get('aprendices/edit/{id}','ApprenticesController@edit')->name('aprendices.edit');
+Route::put('aprendices/update/{id}','ApprenticesController@update')->name('aprendices.update');
+Route::delete('aprendices/{id}','ApprenticesController@delete')->name('aprendices.delete');
 

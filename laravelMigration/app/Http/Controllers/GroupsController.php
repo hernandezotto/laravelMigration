@@ -26,9 +26,9 @@ class GroupsController extends Controller
     }
     public function edit($id)
     {
-         $row=Groups::find($id);
-         $formation=formation_program::find($id);
-         return view('fichas.edit',compact('row','formation'));
+        $rows=Groups::find($id);
+        $formation=formation_program::find($id)->all();
+        return view('fichas.edit',compact('rows','formation'));
     }
     public function update(Request $request,$id)
     {

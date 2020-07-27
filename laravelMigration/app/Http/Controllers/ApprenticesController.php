@@ -33,12 +33,12 @@ class ApprenticesController extends Controller
     }
     public function edit($id)
     {
-        $formation=formation_program::all();
-        $group=Groups::all();
-        $document=Document_types::all();
-        $genders=Genders::all();
+        $formation=formation_program::find($id)->all();
+        $group=Groups::find($id)->all();
+        $document=Document_types::find($id)->all();
+        $genders=Genders::find($id)->all();
         $rows=apprentices::find($id);
-        return view('aprendices.edit',compact('formation','group','document','genders'));
+        return view('aprendices.edit',compact('formation','group','document','genders','rows'));
     }
     public function update(Request $request,$id)
     {
@@ -46,10 +46,8 @@ class ApprenticesController extends Controller
             'names'=>$request->input('names'),
             'lastnames'=>$request->input('lastnames'),
             'email'=>$request->input('email'),
-            'documet'=>$request->input('document'),
+            'document'=>$request->input('document'),
             'edad'=>$request->input('edad'),
-
-
         ]);
         return redirect()->route('aprendices.index');
     }

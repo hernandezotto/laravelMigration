@@ -43,10 +43,10 @@
                                         <td>{{$aprendiz->created_at}}</td>
                                         <td>{{$aprendiz->updated_at}}</td>
                                         <td>
-                                            <form action="" method="post">
+                                            <form action="{{ route('aprendices.delete', $aprendiz->id) }}" method="post">
                                                 @method('DELETE')
                                                 @csrf
-                                                <a href="" class="btn btn-flating btn-small green darken-2">
+                                                <a href="{{ route('aprendices.edit', $aprendiz->id) }}" class="btn btn-flating btn-small green darken-2">
                                                     <i class="material-icons">edit</i>
                                                 </a>
                                                 <button type="submit" class="btn btn-floating btn-small red darken-3">
@@ -54,7 +54,7 @@
                                                 </button>
                                             </form>
                                         </td>
-                                   </tr>
+                                    </tr>
                                     @endforeach
                                 </tbody>
                             </table>

@@ -24,7 +24,7 @@
                                     <select name="formation_programs_id" id="formation_programs_id">
                                         <option>SELECCIONAR...</option>
                                         @foreach ($formation as $fpID)
-                                         <option value="{{$fpID->id}}">{{$fpID->name}}</option>
+                                        <option value="{{$fpID->id}}">{{$fpID->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>

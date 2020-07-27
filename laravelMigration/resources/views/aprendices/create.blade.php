@@ -25,26 +25,6 @@
                                 <input type="text" name="lastnames" >
                                 <label>Apellidos del aprendiz</label>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <select name="formation_programs_id" id="formation_programs_id">
-                                        <option>SELECCIONAR PROGRAMA DE FORMACION...</option>
-                                        @foreach ($formation as $fpID)
-                                         <option value="{{$fpID->id}}">{{$fpID->name}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <select name="groups_id" id="groups_id">
-                                        <option>SELECCIONAR FICHA...</option>
-                                        @foreach ($group as $gID)
-                                         <option value="{{$gID->id}}">{{$gID->name}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
@@ -58,20 +38,31 @@
                                 <label>Documento de identidad</label>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="input-field col s12">
-                                <select name="document_type_id" id="document_type_id">
-                                    <option>SELECCIONAR TIPO DE DOCUMENTO...</option>
-                                    @foreach ($document as $dtID)
-                                     <option value="{{$dtID->id}}">{{$dtID->name}}</option>
+                                <input type="date" name="edad" >
+                                <label>Edad del aprendiz</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select name="formation_programs_id" id="formation_programs_id">
+                                    <option>SELECCIONAR PROGRAMA DE FORMACION...</option>
+                                    @foreach ($formation as $fpID)
+                                     <option value="{{$fpID->id}}">{{$fpID->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input type="date" name="edad" >
-                                <label>Edad del aprendiz</label>
+                                <select name="groups_id" id="groups_id">
+                                    <option>SELECCIONAR FICHA...</option>
+                                    @foreach ($group as $gID)
+                                     <option value="{{$gID->id}}">{{$gID->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="row">
@@ -82,6 +73,16 @@
                                      <option value="{{$genID->id}}">{{$genID->name}}</option>
                                     @endforeach
                                 </select>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <select name="document_types_id" id="document_types_id">
+                                            <option>SELECCIONAR TIPO DE DOCUMENTO...</option>
+                                            @foreach ($document as $dtID)
+                                             <option value="{{$dtID->id}}">{{$dtID->name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -10,21 +10,21 @@
 <body class="container row">
     <div class=" center card col s8 push-s2">
         <div class=" card-content">
-            <form action="" method="post" id="data" >
+            <form action="{{ route('fichas.update',$rows->id) }}" method="post" id="data" >
                 @method('PUT')
                 @csrf
                 <div class="row">
                     <div class="col s12">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input type="text" name="name" value="{{$row->name}}">
+                                <input type="text" name="name" value="{{$rows->name}}">
                                 <label>Nombre del ficha</label>
                             </div>
                             <div class="row">
                                 <input-field class="col s12">
-                                    <select name="formation_programs_id" id="formation_programs_id">
+                                <select name="formation_programs_id" id="formation_programs_id">
                                         @foreach ($formation as $fpID)
-                                         <option value="{{$fpID->id}}">{{$fpID->name}}</option>
+                                        <option value="{{$fpID->name}}">{{$fpID->name}}</option>
                                         @endforeach
                                     </select>
                                 </input-field>

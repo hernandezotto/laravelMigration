@@ -24,10 +24,9 @@ class CreateApprenticesTable extends Migration
             $table->bigInteger('groups_id')->unsigned();
             $table->bigInteger('genders_id')->unsigned();
             $table->bigInteger('document_types_id')->unsigned();
-            $table->foreign('formation_programs_id')->references('id')->on('formation_programs');
-            $table->foreign('groups_id')->references('id')->on('groups');
-            $table->foreign('genders_id')->references('id')->on('groups');
-            $table->foreign('document_types_id')->references('id')->on('groups');
+            $table->foreign('groups_id','formation_programs_id')->references('id','formation_programs_id')->on('groups');
+            $table->foreign('genders_id')->references('id')->on('genders');
+            $table->foreign('document_types_id')->references('id')->on('document_type');
             $table->timestamps();
         });
     }
